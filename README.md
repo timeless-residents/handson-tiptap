@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + Tiptap Editor Example
 
-## Getting Started
+このプロジェクトは[Next.js](https://nextjs.org)と[Tiptap](https://tiptap.dev/)を使用したリッチテキストエディタの実装例です。
 
-First, run the development server:
+## 機能
+
+- リッチテキストエディタの基本機能
+  - 太字
+  - 斜体
+  - 取消線
+  - 見出し
+  - 箇条書きリスト
+  - 番号付きリスト
+
+## 技術スタック
+
+- [Next.js](https://nextjs.org/) 14
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tiptap](https://tiptap.dev/)
+
+## セットアップ
+
+まず、必要なパッケージをインストールします：
+
+```bash
+npm install
+# または
+yarn
+# または
+pnpm install
+```
+
+次に、開発サーバーを起動します：
 
 ```bash
 npm run dev
-# or
+# または
 yarn dev
-# or
+# または
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000)をブラウザで開いて動作を確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## プロジェクト構造
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+.
+├── app/
+│   ├── page.tsx              # メインページ
+│   └── globals.css           # グローバルスタイル
+├── components/
+│   └── TiptapEditor.tsx      # Tiptapエディターコンポーネント
+└── ...
+```
 
-## Learn More
+## 使用方法
 
-To learn more about Next.js, take a look at the following resources:
+エディタは以下のショートカットキーをサポートしています：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `Ctrl + B` : 太字
+- `Ctrl + I` : 斜体
+- `Ctrl + Shift + X` : 取消線
+- `Ctrl + Alt + 1` : 見出し1
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+また、ツールバーのボタンからも各機能を利用できます。
 
-## Deploy on Vercel
+## カスタマイズ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+エディタの機能を拡張するには、以下のような追加パッケージをインストールします：
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm install @tiptap/extension-table @tiptap/extension-image
+# など
+```
+
+## ライセンス
+
+このプロジェクトは[MIT](LICENSE)ライセンスの下で公開されています。
+
+## 参考リンク
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tiptap Documentation](https://tiptap.dev/docs/editor/introduction)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
